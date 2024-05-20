@@ -130,7 +130,9 @@ export function useUpdateStates () {
 
     if (newWord === undefined) return
 
-    dispatchUserData({ type: UPDATE_WORD, payload: newWord })
+    setTimeout(() => {
+      dispatchUserData({ type: UPDATE_WORD, payload: newWord })
+    }, 100)
   }, [generateNewWord])
 
   // save stats in local storage
